@@ -1,0 +1,30 @@
+[Defines]
+  INF_VERSION    = 0x00010005
+  BASE_NAME      = FrameBufferSerialPortLib
+  MODULE_TYPE    = BASE
+  VERSION_STRING = 1.0
+  LIBRARY_CLASS  = SerialPortLib
+
+[Sources.common]
+  FrameBufferSerialPortLib.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  ArmPkg/ArmPkg.dec
+  XiaomiMI8SEPkg/XiaomiMI8SEPkg.dec
+
+[LibraryClasses]
+  ArmLib
+  PcdLib
+  IoLib
+  HobLib
+  CompilerIntrinsicsLib
+  CacheMaintenanceLib
+
+[Pcd]
+  gXiaomiMI8SEPkgTokenSpaceGuid.PcdMipiFrameBufferAddress
+  gXiaomiMI8SEPkgTokenSpaceGuid.PcdMipiFrameBufferWidth
+  gXiaomiMI8SEPkgTokenSpaceGuid.PcdMipiFrameBufferHeight
+  gXiaomiMI8SEPkgTokenSpaceGuid.PcdMipiFrameBufferPixelBpp
+  gXiaomiMI8SEPkgTokenSpaceGuid.PcdMipiFrameBufferVisibleWidth
+  gXiaomiMI8SEPkgTokenSpaceGuid.PcdMipiFrameBufferVisibleHeight
