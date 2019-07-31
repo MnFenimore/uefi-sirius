@@ -24,7 +24,7 @@
 #
 ################################################################################
 
-[FD.XiaomiMI6Pkg_UEFI]
+[FD.XiaomiMI8SEPkg_UEFI]
 BaseAddress   = 0xd0000000|gArmTokenSpaceGuid.PcdFdBaseAddress  # The base address of the Firmware in NOR Flash.
 Size          = 0x00200000|gArmTokenSpaceGuid.PcdFdSize         # The size in bytes of the FLASH Device
 ErasePolarity = 1
@@ -220,12 +220,6 @@ READ_LOCK_STATUS   = TRUE
   #
   #Binary DXE drivers from Lenovo MSM8998
   #
-
-  FILE DRIVER = 0d35cd8e-97ea-4f9a-96af-0f0d89f76567 {
-#    SECTION DXE_DEPEX = XiaomiMI8SEPkg/Binary/UFSDxe/UFSDxe.depex
-    SECTION PE32 = XiaomiMI8SEPkg/Binary/UFSDxe/UFSDxe.efi
-    SECTION UI = "UFSDxe"
-  }
 
   FILE DRIVER = 7a32bd23-f735-4f57-aa1a-447d2fe3be0d {
     SECTION DXE_DEPEX = XiaomiMI8SEPkg/Binary/SPI/SPI.depex
