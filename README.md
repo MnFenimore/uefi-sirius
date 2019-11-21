@@ -4,7 +4,10 @@ Based on zhuowei's port for Pixel3XL (https://github.com/Pixel3Dev/edk2-pixel3/)
 
 ## Status 
 
-Can load GRUB2 from a fat partition on the UFS.(/firmware is tested,you can also format the useless /cust for it)
+Can load GRUB2 from a fat partition on the emmc.(/firmware is tested,you can also format the useless /vendor for it)
+Can partially boot the Fedora 29 aarch64 kernel: there's no initrd, so the kernel panics when mounting root FS.
+
+Since there's no internal storage support yet, use the addlinux branch to embed a Linux kernel in the UEFI firmware.
 
 ## Building
 Tested on Ubuntu 18.04.
